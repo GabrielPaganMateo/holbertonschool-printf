@@ -1,0 +1,32 @@
+.TH PRINTF 3 "November 2022" "version 1.0" "HolbertonSchool-Printf"
+.SH NAME
+_printf - formatted output conversion
+.SH SYNOPSIS
+#include "main.h"
+
+int printf(const char *format, ...);
+
+_printf("%Specifier", VAR);
+
+_printf("TEXT");
+.SH DESCRIPTION
+Produces output to the standard output stream (stdout). Output is under the control of a format string that specifies how subsequent arguments, accessed via the variable-length argument facilities of stdarg(3), are converted for output.
+.SH Conversion specifiers
+A character that specifies the type of conversion to be applied.
+The conversion specifiers and their meanings are:
+.IP c
+An int argument is converted to an unsigned char, and the resulting character is written.
+.IP "i, d"
+An int argument is converted to signed decimal notation. Gives the minimum number of digits that must appear.
+.IP s
+A const char* argument, that is expected to be a pointer to a string, will be written up to (but not including) a terminating null byte ('\0').
+.IP %
+A '%' is written. No argument converted. The complete conversion specification is '%%'.
+.SH RETURN VALUE
+Upon succesful return, these functions return the number of characters printed.
+.SH BUGS
+No known defects have been identified.
+.SH AUTHOR(s)
+Gabriel Pagan and Gabriel Fernandez
+.SH SEE ALSO
+printf(1), printf(3)
