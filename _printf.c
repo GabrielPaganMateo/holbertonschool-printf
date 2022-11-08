@@ -34,10 +34,10 @@ int _printf(const char *format, ...)
 				case 's':
 				char_count += print_string(va_arg(a, char*));
 				break;
-
+        
 				case 'd': case 'i':
-				char_count += print_int(va_arg(a, int));
-				break;
+        char_count += print_int(va_arg(a, int));
+
 				/*
 				* for now, we're using decimal print_int for both
 				* "%i" and "%d".
