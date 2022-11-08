@@ -28,8 +28,20 @@ int _printf(const char *format, ...)
 				char_count += print_string(va_arg(a, char*));
 				break;
 
-				case '%':
+				case '%'
 				write(1, "%", 1);
+				break;
+
+				case 'i':
+				char_count += print_int(va_arg(a, int));
+				break;
+
+				case 'd':
+				char_count += print_int(va_arg(a, int));
+				/*
+				 * for now, we're using decimal print_int for both
+				 * "%i" and "%d".
+				 */
 				break;
 			}
 		}
