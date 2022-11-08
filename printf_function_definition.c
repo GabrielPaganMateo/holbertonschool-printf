@@ -3,7 +3,7 @@
 int print_char(int a)
 {
 	write(1, &a, 1);
-	return(1);
+	return (1);
 }
 
 int print_string(char *a)
@@ -13,9 +13,16 @@ int print_string(char *a)
 	length = strlen(a);
 
 	write(1, a, length);
-	return(length);
+	return (length);
 }
 
+/**
+ * print_int - Prints integer 'i' in base 10.
+ * @i: integer to be printed in base 10
+ *
+ * Return: the amount of chars the number
+ * takes in the standard output.
+ */
 int print_int(int i)
 {
 	char output[] = "          ";
