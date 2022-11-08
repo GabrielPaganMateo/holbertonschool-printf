@@ -7,5 +7,4 @@ int _printf(const char *format, ...);
 int print_char(int a);
 
 int print_string(char *a);
-int print_int(int i);
 #endif

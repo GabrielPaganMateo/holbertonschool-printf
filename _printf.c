@@ -25,6 +25,10 @@ int _printf(const char *format, ...)
 				case 's':
 				char_count += print_string(va_arg(a, char*));
 				break;
+
+				case 'i':
+				char_count += print_int(va_arg(a, int));
+				break;
 			}
 		}
 		else
