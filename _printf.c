@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 				char_count += print_string(va_arg(a, char*));
 				break;
 
-				case '%'
+				case '%':
 				write(1, "%", 1);
 				break;
         
