@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * printf - Produce output to stdout
- * @format: string that specifies how subsequent arguments are converted for output
+ * _printf - Produce output to stdout
+ * @format: string that specifies how subsequent arguments
+ * are converted for output
  * Return: the amount of characters printed
  */
 int _printf(const char *format, ...)
@@ -9,6 +10,7 @@ int _printf(const char *format, ...)
 	va_list a;
 	int i = 0;
 	int char_count = 0;
+
 	va_start(a, format);
 
 	while (format[i])
