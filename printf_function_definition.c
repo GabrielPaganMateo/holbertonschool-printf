@@ -26,23 +26,32 @@ int print_string(char *a)
 int print_int(int i)
 {
 	char output[] = "          ";
+	/* digits are filled from least significant; from right to left here. */
 	int digit_limit = 10;
 	/*
 	 * integer limit is 2,417,483,647, so we only need 10 digits.
 	 * Outputting the digits individually, from most significant
 	 * to least significant
 	 */
-
-	int index = digit_limit - 1;
-	int digit_count = 0;
+	int index;
+	int minus_sign = 0;
+	/* to count minus sign in the returned output's length */
+	int digit_count;
 
 	if (i == 0)
 	{
 		write(1, "0", 1);
 		return (1);
 	}
+	if (i < 0)
+	{
+		write(1, "-", 1);
+		i = -1 * i;
+		/* We need to turn i into a positive number to avoid wrong digit chars. */
+		minus_sign = 1;
+	}
 
-	for (; i;)
+	for (index = digit_limit - 1; i;)
 	{
 		output[index] = '0' + (i % 10);
 
@@ -51,12 +60,10 @@ int print_int(int i)
 	}
 	index++;
 
-	if (i < 0)
-		write(1, "-", 1);
-
 	digit_count = digit_limit - index;
 	write(1, &(output[index]), digit_count);
 
-	return (digit_count ? i > 0 : digit_count + 1);
+	return (minus_sign + digit_count);
+	/* 'minus_sign' is 0 when 'i' was not inputted negative. */
 }
 
