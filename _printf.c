@@ -27,6 +27,10 @@ int _printf(const char *format, ...)
 				case 's':
 				char_count += print_string(va_arg(a, char*));
 				break;
+
+				case '%':
+				write(1, "%", 1);
+				break;
 			}
 		}
 		else
