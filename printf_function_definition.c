@@ -81,4 +81,24 @@ int print_int(int i)
 	return (minus_sign + digit_count);
 	/* 'minus_sign' is 0 when 'i' was not inputted negative. */
 }
+/**
+ * print_default - prints edge case that does not apply in switch case
+ * @a: pointer to character to be printed
+ * Return: amount of character printed
+ */
+int print_default(char a)
+{
+	write(1, "%", 1);
+	write(1, &a, 1);
+	return(2);
+}
+/**
+ * print_percent - prints percent sign
+ * Return: 1, for the one percent printed
+ */
+int print_percent(void)
+{
+	write(1, "%", 1);
+	return(1);
+}
 
