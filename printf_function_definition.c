@@ -1,14 +1,29 @@
 #include "main.h"
 #include <string.h>
+/**
+ * print_char - prints a single character
+ * @a: character to be printed
+ * Return: 1, for the amount of characters printed
+ */
 int print_char(int a)
 {
 	write(1, &a, 1);
 	return (1);
 }
-
+/**
+ * print_string - prints a string from _printf
+ * @a: pointer to string
+ * Return: length of string
+ */
 int print_string(char *a)
 {
 	int length;
+
+	if (a == NULL)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 
 	length = strlen(a);
 
@@ -65,5 +80,25 @@ int print_int(int i)
 
 	return (minus_sign + digit_count);
 	/* 'minus_sign' is 0 when 'i' was not inputted negative. */
+}
+/**
+ * print_default - prints edge case that does not apply in switch case
+ * @a: pointer to character to be printed
+ * Return: amount of character printed
+ */
+int print_default(char a)
+{
+	write(1, "%", 1);
+	write(1, &a, 1);
+	return(2);
+}
+/**
+ * print_percent - prints percent sign
+ * Return: 1, for the one percent printed
+ */
+int print_percent(void)
+{
+	write(1, "%", 1);
+	return(1);
 }
 
