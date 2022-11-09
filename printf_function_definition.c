@@ -90,7 +90,7 @@ int print_default(char a)
 {
 	write(1, "%", 1);
 	write(1, &a, 1);
-	return(2);
+	return (2);
 }
 /**
  * print_percent - prints percent sign
@@ -99,6 +99,6 @@ int print_default(char a)
 int print_percent(void)
 {
 	write(1, "%", 1);
-	return(1);
+	return (1);
 }
 
