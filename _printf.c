@@ -52,7 +52,8 @@ int _printf(const char *format, ...)
 				default:
 				write(1, "%", 1);
 				write(1, &format[i], 1);
-				return (-1);
+				char_count += 2;
+				/* An unknown format char will just get printed with its '%'. */
 			}
 		}
 		else
