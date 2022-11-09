@@ -9,3 +9,4 @@ int print_int(int i);
 int print_default(char a);
 int print_percent(void);
 #endif
+
