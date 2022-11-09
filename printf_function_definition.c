@@ -1,14 +1,29 @@
 #include "main.h"
 #include <string.h>
+/**
+ * print_char - prints a single character
+ * @a: character to be printed
+ * Return: 1, for the amount of characters printed
+ */
 int print_char(int a)
 {
 	write(1, &a, 1);
 	return (1);
 }
-
+/**
+ * print_string - prints a string from _printf
+ * @a: pointer to string
+ * Return: length of string
+ */
 int print_string(char *a)
 {
 	int length;
+
+	if (a == NULL)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 
 	length = strlen(a);
 
