@@ -50,6 +50,8 @@ int _printf(const char *format, ...)
 				/* '%%' just cancels into '%' */
 
 				default:
+				write(1, "%", 1);
+				write(1, &format[i], 1);
 				return (-1);
 			}
 		}
