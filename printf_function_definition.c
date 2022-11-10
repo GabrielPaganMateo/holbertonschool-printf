@@ -56,34 +56,29 @@ int print_int(int i)
 		write(1, "0", 1);
 		return (1);
 	}
-
 	for (index = char_limit - 1; i;)
 	{
 		char digit = (char)(i % 10);
+
 		if (digit < 0)
 			digit *= -1;
-
 		output[index] = '0' + digit;
 		/*
 		 * ('i % 10' will always be between -10 and 10 here)
 		 * If 'i' is negative, 'i % 10' also give a negative char,
 		 * so we have to turn it posivite to avoid non-digit chars.
 		 */
-
 		i /= 10;
 		index--;
 	}
-
 	if (i_copy < 0)
 		output[index] = '-';
 	else
 		index++;
 	/* move one more index to the left if minus sign is needed. */
-
 	char_count = char_limit - index;
 	/* this also counts minus sign */
 	write(1, &(output[index]), char_count);
-
 	return (char_count);
 }
 /**
