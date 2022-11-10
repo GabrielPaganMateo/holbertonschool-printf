@@ -8,8 +8,7 @@
 int _printf(const char *format, ...)
 {
 	va_list a;
-	int i = 0;
-	int char_count = 0;
+	int i = 0, char_count = 0;
 
 	if (format == NULL)
 		return (-1);
@@ -19,8 +18,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			while (format[++i] == ' ')
-			{
-			}
+			;
 			switch (format[i])
 			{
 				case 'c':
@@ -35,6 +33,8 @@ int _printf(const char *format, ...)
 				case '%':
 				char_count += print_percent();
 				break;
+				case '\0':
+				return (-1);
 				default:
 				char_count += print_default(format[i]);
 			}
