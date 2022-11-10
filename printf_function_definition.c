@@ -51,6 +51,8 @@ int print_int(int i)
 	int index;
 	int minus_sign = 0;
 	/* to count minus sign in the returned output's length */
+	unsigned int ui = (unsigned int)i;
+	/* We need to turn i into a positive number to avoid wrong digit chars. */
 	int digit_count;
 
 	if (i == 0)
@@ -61,16 +63,14 @@ int print_int(int i)
 	if (i < 0)
 	{
 		write(1, "-", 1);
-		i = -1 * i;
-		/* We need to turn i into a positive number to avoid wrong digit chars. */
 		minus_sign = 1;
 	}
 
-	for (index = digit_limit - 1; i;)
+	for (index = digit_limit - 1; ui;)
 	{
-		output[index] = '0' + (i % 10);
+		output[index] = '0' + (ui % 10);
 
-		i /= 10;
+		ui /= 10;
 		index--;
 	}
 	index++;
