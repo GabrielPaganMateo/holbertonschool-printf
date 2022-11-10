@@ -58,7 +58,7 @@ int print_int(int i)
 	}
 	for (index = char_limit - 1; i;)
 	{
-		char digit = (char)(i % 10);
+		int digit = i % 10;
 
 		if (digit < 0)
 			digit *= -1;
