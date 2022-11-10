@@ -40,46 +40,51 @@ int print_string(char *a)
  */
 int print_int(int i)
 {
-	char output[] = "          ";
+	int i_copy = i;
+	char output[] = "           ";
 	/* digits are filled from least significant; from right to left here. */
-	int digit_limit = 10;
+	int char_limit = 11;
 	/*
-	 * integer limit is 2,417,483,647, so we only need 10 digits.
-	 * Outputting the digits individually, from most significant
-	 * to least significant
+	 * integer limit is 2,417,483,647, so we only need 10 digits, and a
+	 * minus sign if needed.
 	 */
 	int index;
-	int minus_sign = 0;
-	/* to count minus sign in the returned output's length */
-	unsigned int ui = (unsigned int)i;
-	/* We need to turn i into a positive number to avoid wrong digit chars. */
-	int digit_count;
+	int char_count;
 
 	if (i == 0)
 	{
 		write(1, "0", 1);
 		return (1);
 	}
-	if (i < 0)
-	{
-		write(1, "-", 1);
-		minus_sign = 1;
-	}
 
-	for (index = digit_limit - 1; ui;)
+	for (index = char_limit - 1; i;)
 	{
-		output[index] = '0' + (ui % 10);
+		char digit = (char)(i % 10);
+		if (digit < 0)
+			digit *= -1;
 
-		ui /= 10;
+		output[index] = '0' + digit;
+		/*
+		 * ('i % 10' will always be between -10 and 10 here)
+		 * If 'i' is negative, 'i % 10' also give a negative char,
+		 * so we have to turn it posivite to avoid non-digit chars.
+		 */
+
+		i /= 10;
 		index--;
 	}
-	index++;
 
-	digit_count = digit_limit - index;
-	write(1, &(output[index]), digit_count);
+	if (i_copy < 0)
+		output[index] = '-';
+	else
+		index++;
+	/* move one more index to the left if minus sign is needed. */
 
-	return (minus_sign + digit_count);
-	/* 'minus_sign' is 0 when 'i' was not inputted negative. */
+	char_count = char_limit - index;
+	/* this also counts minus sign */
+	write(1, &(output[index]), char_count);
+
+	return (char_count);
 }
 /**
  * print_default - prints edge case that does not apply in switch case
