@@ -13,5 +13,5 @@ Contains auxiliary functions for printf. Each of the functions is tasked with th
 |print_char|Prints a single character|H|
 |print_string|Prints a string|I am a string !|
 |print_int|Prints integer in base 10|12
-|print_default|Prints unidentified conversion specifier|%r|
+|print_default|Prints unknown conversion specifier|%r|
 |print_percent|Prints a percent sign|%|
