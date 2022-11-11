@@ -4,6 +4,7 @@
 ## Description:
 * ### [_printf.c](_printf.c)
 Complete _printf function. It produces output under the control of a format string that specifies how each argument within the function is converted to output. The output processing of _printf.c owes its execution to the write(2) function and makes use of variable-length arguments by means of stdarg(3). Specific conversions will be made for all of the variable-length arguments, depending on the case that is listed in the format string. These cases include characters, strings, digits, and integers.
+
 * ### [auxiliary_functions.c](auxiliary_functions.c)
 Contains supporting functions for _printf. Each of the functions is tasked with the conversion of a particular type of argument and the subsequent output of said argument.
 
@@ -16,13 +17,16 @@ Contains supporting functions for _printf. Each of the functions is tasked with 
 |print_percent|Prints a percent sign|%|
 
 * ### [main.h](main.h)
-Header file. Stores all the auxiliary function prototypes and additional library headers that are necessary for the realization of printf.
+Header file. Stores all the auxiliary function prototypes and additional library headers that are necessary for the realization of _printf.
 
-|Additional Library| Function(s) | Purpose|
+|Library| Function(s) | Purpose|
 |:-------:|:-------------:|:--------:|
 |<string.h>| strlen(3) | Calculate the length of a string|
 |<unistd.h>| write(2) | Write to standard output|
 |<stdarg.h>| va_start(3) va_arg(3) va_end(3) | Access list of varying arguments|
 
 * ### [man_3_printf](man_3_printf)
-Manual page for 
+Manual page of _printf. Outlines a detailed explanation of the function.
+
+Can be accessed by entering the following input into the command line:
+|man ./man_3_printf|
