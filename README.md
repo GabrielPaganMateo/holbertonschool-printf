@@ -26,7 +26,8 @@ Header file. Stores all the auxiliary function prototypes and additional library
 |<stdarg.h>| va_start(3) va_arg(3) va_end(3) | Access list of varying arguments|
 
 * ### [man_3_printf](man_3_printf)
-Manual page of _printf. Outlines a detailed explanation of the function.
+Manual page of _printf function. Outlines a detailed explanation of the function.
 
 Can be accessed by entering the following input into the command line:
 |man ./man_3_printf|
+|:-----------------:|
