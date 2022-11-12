@@ -34,7 +34,7 @@ Can be accessed by entering the following input into the command line:
 |------------------|
 ----------------------------------------------------------------------------------------------------------------
 ## Install and Run:
-In order to make use of this program:
+#### Instructions for using the _printf function.
 
 1. Download an appropriate C language compiler and library collection for your OS.
 2. Clone this repository into a directory of your preference.
