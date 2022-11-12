@@ -1,7 +1,8 @@
 ## Printf function / Holberton School edition
-#### This repository contains the code and files for a program that emulates some of the capabilities of the C standard library input/output function "printf". Developed as a learning project for C language implementation.
+#### This repository contains the code and files for a program that emulates some of the capabilities of the C standard library input/output function "printf". Developed in C language as a learning project meant to test critical thinking, team effort, and overall knowledge of C technology.
 -------------------------------------------------------------------------------------------------------------
 ## Description:
+
 * ### [_printf.c](_printf.c)
 Complete _printf function. It produces output under the control of a format string that specifies how each argument within the function is converted to output. The output processing of _printf.c owes its execution to the write(2) function and makes use of variable-length arguments by means of stdarg(3). Specific conversions will be made for all of the variable-length arguments, depending on the case that is listed in the format string. These cases include characters, strings, digits, and integers.
 
@@ -30,3 +31,15 @@ Manual page of _printf. Outlines a detailed explanation of the function.
 
 Can be accessed by entering the following input into the command line:
 |man ./man_3_printf|
+----------------------------------------------------------------------------------------------------------------
+## Install and Run:
+In order to make use of this program:
+
+1. Download an appropriate C language compiler and library collection for your OS.
+2. Clone this repository into a directory of your preference.
+3. Create a file with a ".c" extension. For example, "filename.c"
+4. Within filename.c, include a "main.h" header, define your main function, and call _printf within your main function with whichever argument you would like to output.
+5. Compile your program by using this command: gcc filename.c -o filename
+6. Finally, execute the file with the following command: ./filename
+
+
