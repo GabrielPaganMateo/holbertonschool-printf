@@ -38,7 +38,7 @@ Can be accessed by entering the following input into the command line:
 
 1. Download an appropriate C language compiler and library collection for your OS.
 2. Clone the /holbertonschool-printf repository.
-3. Enter the cloned repository and within create a file with a ".c" extension. For example, "filename.c"
+3. Enter the cloned repository and within it create a file with a ".c" extension. For example, "filename.c"
 4. Inside filename.c, include the "main.h" header, define a main function, and call _printf within the main function with whichever argument you would like to output.
 5. Compile your program by using this command: gcc *.c -o filename
 6. Finally, execute the program with the following command: ./filename
