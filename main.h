@@ -2,6 +2,7 @@
 #define MAIN_H
 #include <stdarg.h>
 #include <unistd.h>
+#include <string.h>
 
 #define ABS(x) ((unsigned char)x << 1 >> 1)
 int _printf(const char *format, ...);

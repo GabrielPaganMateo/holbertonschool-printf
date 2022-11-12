@@ -27,7 +27,7 @@ Header file. Stores all the auxiliary function prototypes and additional library
 |<stdarg.h>| va_start(3) va_arg(3) va_end(3) | Access list of varying arguments|
 
 * ### [man_3_printf](man_3_printf)
-Manual page of _printf. Outlines a detailed explanation of the function.
+Manual page of _printf function. Outlines a detailed explanation of the function.
 
 Can be accessed by entering the following input into the command line:
 |man ./man_3_printf|
@@ -42,5 +42,3 @@ In order to make use of this program:
 4. Within filename.c, include a "main.h" header, define your main function, and call _printf within your main function with whichever argument you would like to output.
 5. Compile your program by using this command: gcc filename.c -o filename
 6. Finally, execute the file with the following command: ./filename
-
-
