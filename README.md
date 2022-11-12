@@ -31,6 +31,7 @@ Manual page of _printf. Outlines a detailed explanation of the function.
 
 Can be accessed by entering the following input into the command line:
 |man ./man_3_printf|
+|------------------|
 ----------------------------------------------------------------------------------------------------------------
 ## Install and Run:
 In order to make use of this program:
