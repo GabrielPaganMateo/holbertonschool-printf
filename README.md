@@ -43,4 +43,7 @@ Can be accessed by entering the following input into the command line:
 5. Compile your program by using this command: gcc *.c -o filename
 6. Finally, execute the program with the following command: ./filename
 
+#### Shell commands
 ![carbon(1)](https://user-images.githubusercontent.com/113718820/201495883-8ef097f7-f214-4ebe-95d6-f008c53da253.png)
+#### filename.c
+![carbon(5)](https://user-images.githubusercontent.com/113718820/201500410-5c5624e3-1428-4755-8c1c-7cc0d340dbd9.png)
