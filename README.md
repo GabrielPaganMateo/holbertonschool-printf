@@ -48,6 +48,7 @@ Can be accessed by entering the following input into the command line:
 #### filename.c
 ![carbon(5)](https://user-images.githubusercontent.com/113718820/201500410-5c5624e3-1428-4755-8c1c-7cc0d340dbd9.png)
 -----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 ## Challenges and Future:
 The initial intention of making _printf was to do it by means of function pointers, but setbacks and incomprehension made us decide to use switch cases since we found it more to our comfort and liking. Additionally, our _printf is still an incomplete version of the original C standard library printf, it lacks the ability to print floating point numbers as well as many other types of arguments and we also didn't include any special options like flags or length for the format specifiers. Meaning that our _printf actually pales in comparison with the variety of options and arguments that are available in the original C standard library printf. Considerations for the future include the recreation of _printf but through the use of function pointers, program instructions for printing all of the possible argument types and include the special options for format specifiers.
 
