@@ -1,5 +1,5 @@
 ## Printf function / Holberton School edition
-#### This repository contains the code and files for a program that emulates some of the capabilities of the C standard library input/output function "printf". Developed as a learning project meant to test critical thinking, pair programming, and overall knowledge of C language.
+#### This repository contains the code and files for a program that emulates some of the capabilities of the C standard library input/output function "printf". Developed as a learning project meant to test critical thinking, pair programming, and our overall knowledge of C language.
 -------------------------------------------------------------------------------------------------------------
 ## Description:
 
@@ -50,3 +50,7 @@ Can be accessed by entering the following input into the command line:
 -----------------------------------------------------------------------------------------------------------------
 ## Challenges and Future:
 The initial intention of making _printf was to do it by means of function pointers, but setbacks and incomprehension made us decide to use switch cases since we found it more to our comfort and liking. Additionally, our _printf is still an incomplete version of the original C standard library printf, it lacks the ability to print floating point numbers as well as many other types of arguments and we also didn't include any special options like flags or length for the format specifiers. Meaning that our _printf actually pales in comparison with the variety of options and arguments that are available in the original C standard library printf. Considerations for the future include the recreation of _printf but through the use of function pointers, program instructions for printing all of the possible argument types and include the special options for format specifiers.
+-----------------------------------------------------------------------------------------------------------------
+## Credits:
+This project would not be the success it is without the team effort of both [Gabriel Fernandez](https://github.com/GABETROLL) and [Gabriel Pagan](https://github.com/GabrielPaganMateo). 
+If you have any suggestions or ideas that you would like to share with us regarding the content of this repository, you are welcome to send an email to 5673@holbertonstudents.com. Thank you.
