@@ -1,5 +1,5 @@
 ## Printf function / Holberton School edition
-#### This repository contains the code and files for a program that emulates some of the capabilities of the C standard library input/output function "printf". Developed in C language as a learning project meant to test critical thinking, team effort, and overall knowledge of C technology.
+#### This repository contains the code and files for a program that emulates some of the capabilities of the C standard library input/output function "printf". Developed as a learning project meant to test critical thinking, pair programming, and overall knowledge of C language.
 -------------------------------------------------------------------------------------------------------------
 ## Description:
 
@@ -18,7 +18,7 @@ Contains supporting functions for _printf. Each of the functions is tasked with 
 |print_percent|Prints a percent sign|%|
 
 * ### [main.h](main.h)
-Header file. Stores all the auxiliary function prototypes and additional library headers that are necessary for the realization of _printf.
+Header file. Stores all the auxiliary functions prototypes and additional library headers that are necessary for the realization of _printf.
 
 |Library| Function(s) | Purpose|
 |:-------:|:-------------:|:--------:|
@@ -47,3 +47,6 @@ Can be accessed by entering the following input into the command line:
 ![carbon(1)](https://user-images.githubusercontent.com/113718820/201495883-8ef097f7-f214-4ebe-95d6-f008c53da253.png)
 #### filename.c
 ![carbon(5)](https://user-images.githubusercontent.com/113718820/201500410-5c5624e3-1428-4755-8c1c-7cc0d340dbd9.png)
+-----------------------------------------------------------------------------------------------------------------
+## Challenges and Future:
+The initial intention of making _printf was to do it by means of function pointers, but setbacks and incomprehension made us decide to use switch cases since we found it more to our comfort and liking. Additionally, our _printf is still an incomplete version of the original C standard library printf, it lacks the ability to print floating point numbers and we also didn't include any special options for the format specifiers. Meaning that our _printf actually pales in comparison with the variety of options and arguments that are available in the original C standard library printf. Looking towa 
